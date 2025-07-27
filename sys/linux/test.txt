@@ -1,0 +1,189 @@
+# 自动生成的ICMP测试专用描述文件
+include <linux/types.h>
+include <linux/byteorder/generic.h>
+resource sock_proto[sock]
+
+ttl = -1, 0, 1, 64, 255, 256
+syz_emit_proto$ah_ipv4(proto const[IPPROTO_AH], addr ptr[in, sockaddr_in], addrlen len[addr], packet ptr[in, ipv4_packet], ttl int8[ttl]) sock_proto
+syz_emit_proto$ah_ipv6(proto const[IPPROTO_AH], addr ptr[in, sockaddr_in6], addrlen len[addr], packet ptr[in, ipv6_packet], ttl int8[ttl]) sock_proto
+syz_receive_proto$ah_ipv4(proto const[IPPROTO_AH], fd sock_proto, buffer ptr[out, array[int8]], buflen len[buffer])
+syz_receive_proto$ah_ipv6(proto const[IPPROTO_AH], fd sock_proto, buffer ptr[out, array[int8]], buflen len[buffer])
+
+syz_emit_proto$beetph_ipv4(proto const[IPPROTO_BEETPH], addr ptr[in, sockaddr_in], addrlen len[addr], packet ptr[in, ipv4_packet], ttl int8[ttl]) sock_proto
+syz_emit_proto$beetph_ipv6(proto const[IPPROTO_BEETPH], addr ptr[in, sockaddr_in6], addrlen len[addr], packet ptr[in, ipv6_packet], ttl int8[ttl]) sock_proto
+syz_receive_proto$beetph_ipv4(proto const[IPPROTO_BEETPH], fd sock_proto, buffer ptr[out, array[int8]], buflen len[buffer])
+syz_receive_proto$beetph_ipv6(proto const[IPPROTO_BEETPH], fd sock_proto, buffer ptr[out, array[int8]], buflen len[buffer])
+
+syz_emit_proto$comp_ipv4(proto const[IPPROTO_COMP], addr ptr[in, sockaddr_in], addrlen len[addr], packet ptr[in, ipv4_packet], ttl int8[ttl]) sock_proto
+syz_emit_proto$comp_ipv6(proto const[IPPROTO_COMP], addr ptr[in, sockaddr_in6], addrlen len[addr], packet ptr[in, ipv6_packet], ttl int8[ttl]) sock_proto
+syz_receive_proto$comp_ipv4(proto const[IPPROTO_COMP], fd sock_proto, buffer ptr[out, array[int8]], buflen len[buffer])
+syz_receive_proto$comp_ipv6(proto const[IPPROTO_COMP], fd sock_proto, buffer ptr[out, array[int8]], buflen len[buffer])
+
+syz_emit_proto$dccp_ipv4(proto const[IPPROTO_DCCP], addr ptr[in, sockaddr_in], addrlen len[addr], packet ptr[in, ipv4_packet], ttl int8[ttl]) sock_proto
+syz_emit_proto$dccp_ipv6(proto const[IPPROTO_DCCP], addr ptr[in, sockaddr_in6], addrlen len[addr], packet ptr[in, ipv6_packet], ttl int8[ttl]) sock_proto
+syz_receive_proto$dccp_ipv4(proto const[IPPROTO_DCCP], fd sock_proto, buffer ptr[out, array[int8]], buflen len[buffer])
+syz_receive_proto$dccp_ipv6(proto const[IPPROTO_DCCP], fd sock_proto, buffer ptr[out, array[int8]], buflen len[buffer])
+
+syz_emit_proto$dstopts_ipv4(proto const[IPPROTO_DSTOPTS], addr ptr[in, sockaddr_in], addrlen len[addr], packet ptr[in, ipv4_packet], ttl int8[ttl]) sock_proto
+syz_emit_proto$dstopts_ipv6(proto const[IPPROTO_DSTOPTS], addr ptr[in, sockaddr_in6], addrlen len[addr], packet ptr[in, ipv6_packet], ttl int8[ttl]) sock_proto
+syz_receive_proto$dstopts_ipv4(proto const[IPPROTO_DSTOPTS], fd sock_proto, buffer ptr[out, array[int8]], buflen len[buffer])
+syz_receive_proto$dstopts_ipv6(proto const[IPPROTO_DSTOPTS], fd sock_proto, buffer ptr[out, array[int8]], buflen len[buffer])
+
+syz_emit_proto$egp_ipv4(proto const[IPPROTO_EGP], addr ptr[in, sockaddr_in], addrlen len[addr], packet ptr[in, ipv4_packet], ttl int8[ttl]) sock_proto
+syz_emit_proto$egp_ipv6(proto const[IPPROTO_EGP], addr ptr[in, sockaddr_in6], addrlen len[addr], packet ptr[in, ipv6_packet], ttl int8[ttl]) sock_proto
+syz_receive_proto$egp_ipv4(proto const[IPPROTO_EGP], fd sock_proto, buffer ptr[out, array[int8]], buflen len[buffer])
+syz_receive_proto$egp_ipv6(proto const[IPPROTO_EGP], fd sock_proto, buffer ptr[out, array[int8]], buflen len[buffer])
+
+syz_emit_proto$encap_ipv4(proto const[IPPROTO_ENCAP], addr ptr[in, sockaddr_in], addrlen len[addr], packet ptr[in, ipv4_packet], ttl int8[ttl]) sock_proto
+syz_emit_proto$encap_ipv6(proto const[IPPROTO_ENCAP], addr ptr[in, sockaddr_in6], addrlen len[addr], packet ptr[in, ipv6_packet], ttl int8[ttl]) sock_proto
+syz_receive_proto$encap_ipv4(proto const[IPPROTO_ENCAP], fd sock_proto, buffer ptr[out, array[int8]], buflen len[buffer])
+syz_receive_proto$encap_ipv6(proto const[IPPROTO_ENCAP], fd sock_proto, buffer ptr[out, array[int8]], buflen len[buffer])
+
+syz_emit_proto$esp_ipv4(proto const[IPPROTO_ESP], addr ptr[in, sockaddr_in], addrlen len[addr], packet ptr[in, ipv4_packet], ttl int8[ttl]) sock_proto
+syz_emit_proto$esp_ipv6(proto const[IPPROTO_ESP], addr ptr[in, sockaddr_in6], addrlen len[addr], packet ptr[in, ipv6_packet], ttl int8[ttl]) sock_proto
+syz_receive_proto$esp_ipv4(proto const[IPPROTO_ESP], fd sock_proto, buffer ptr[out, array[int8]], buflen len[buffer])
+syz_receive_proto$esp_ipv6(proto const[IPPROTO_ESP], fd sock_proto, buffer ptr[out, array[int8]], buflen len[buffer])
+
+syz_emit_proto$fragment_ipv4(proto const[IPPROTO_FRAGMENT], addr ptr[in, sockaddr_in], addrlen len[addr], packet ptr[in, ipv4_packet], ttl int8[ttl]) sock_proto
+syz_emit_proto$fragment_ipv6(proto const[IPPROTO_FRAGMENT], addr ptr[in, sockaddr_in6], addrlen len[addr], packet ptr[in, ipv6_packet], ttl int8[ttl]) sock_proto
+syz_receive_proto$fragment_ipv4(proto const[IPPROTO_FRAGMENT], fd sock_proto, buffer ptr[out, array[int8]], buflen len[buffer])
+syz_receive_proto$fragment_ipv6(proto const[IPPROTO_FRAGMENT], fd sock_proto, buffer ptr[out, array[int8]], buflen len[buffer])
+
+syz_emit_proto$gre_ipv4(proto const[IPPROTO_GRE], addr ptr[in, sockaddr_in], addrlen len[addr], packet ptr[in, ipv4_packet], ttl int8[ttl]) sock_proto
+syz_emit_proto$gre_ipv6(proto const[IPPROTO_GRE], addr ptr[in, sockaddr_in6], addrlen len[addr], packet ptr[in, ipv6_packet], ttl int8[ttl]) sock_proto
+syz_receive_proto$gre_ipv4(proto const[IPPROTO_GRE], fd sock_proto, buffer ptr[out, array[int8]], buflen len[buffer])
+syz_receive_proto$gre_ipv6(proto const[IPPROTO_GRE], fd sock_proto, buffer ptr[out, array[int8]], buflen len[buffer])
+
+syz_emit_proto$hopopts_ipv4(proto const[IPPROTO_HOPOPTS], addr ptr[in, sockaddr_in], addrlen len[addr], packet ptr[in, ipv4_packet], ttl int8[ttl]) sock_proto
+syz_emit_proto$hopopts_ipv6(proto const[IPPROTO_HOPOPTS], addr ptr[in, sockaddr_in6], addrlen len[addr], packet ptr[in, ipv6_packet], ttl int8[ttl]) sock_proto
+syz_receive_proto$hopopts_ipv4(proto const[IPPROTO_HOPOPTS], fd sock_proto, buffer ptr[out, array[int8]], buflen len[buffer])
+syz_receive_proto$hopopts_ipv6(proto const[IPPROTO_HOPOPTS], fd sock_proto, buffer ptr[out, array[int8]], buflen len[buffer])
+
+syz_emit_proto$icmp_ipv4(proto const[IPPROTO_ICMP], addr ptr[in, sockaddr_in], addrlen len[addr], packet ptr[in, ipv4_packet], ttl int8[ttl]) sock_proto
+syz_emit_proto$icmp_ipv6(proto const[IPPROTO_ICMP], addr ptr[in, sockaddr_in6], addrlen len[addr], packet ptr[in, ipv6_packet], ttl int8[ttl]) sock_proto
+syz_receive_proto$icmp_ipv4(proto const[IPPROTO_ICMP], fd sock_proto, buffer ptr[out, array[int8]], buflen len[buffer])
+syz_receive_proto$icmp_ipv6(proto const[IPPROTO_ICMP], fd sock_proto, buffer ptr[out, array[int8]], buflen len[buffer])
+
+syz_emit_proto$icmpv6_ipv4(proto const[IPPROTO_ICMPV6], addr ptr[in, sockaddr_in], addrlen len[addr], packet ptr[in, ipv4_packet], ttl int8[ttl]) sock_proto
+syz_emit_proto$icmpv6_ipv6(proto const[IPPROTO_ICMPV6], addr ptr[in, sockaddr_in6], addrlen len[addr], packet ptr[in, ipv6_packet], ttl int8[ttl]) sock_proto
+syz_receive_proto$icmpv6_ipv4(proto const[IPPROTO_ICMPV6], fd sock_proto, buffer ptr[out, array[int8]], buflen len[buffer])
+syz_receive_proto$icmpv6_ipv6(proto const[IPPROTO_ICMPV6], fd sock_proto, buffer ptr[out, array[int8]], buflen len[buffer])
+
+syz_emit_proto$idp_ipv4(proto const[IPPROTO_IDP], addr ptr[in, sockaddr_in], addrlen len[addr], packet ptr[in, ipv4_packet], ttl int8[ttl]) sock_proto
+syz_emit_proto$idp_ipv6(proto const[IPPROTO_IDP], addr ptr[in, sockaddr_in6], addrlen len[addr], packet ptr[in, ipv6_packet], ttl int8[ttl]) sock_proto
+syz_receive_proto$idp_ipv4(proto const[IPPROTO_IDP], fd sock_proto, buffer ptr[out, array[int8]], buflen len[buffer])
+syz_receive_proto$idp_ipv6(proto const[IPPROTO_IDP], fd sock_proto, buffer ptr[out, array[int8]], buflen len[buffer])
+
+syz_emit_proto$igmp_ipv4(proto const[IPPROTO_IGMP], addr ptr[in, sockaddr_in], addrlen len[addr], packet ptr[in, ipv4_packet], ttl int8[ttl]) sock_proto
+syz_emit_proto$igmp_ipv6(proto const[IPPROTO_IGMP], addr ptr[in, sockaddr_in6], addrlen len[addr], packet ptr[in, ipv6_packet], ttl int8[ttl]) sock_proto
+syz_receive_proto$igmp_ipv4(proto const[IPPROTO_IGMP], fd sock_proto, buffer ptr[out, array[int8]], buflen len[buffer])
+syz_receive_proto$igmp_ipv6(proto const[IPPROTO_IGMP], fd sock_proto, buffer ptr[out, array[int8]], buflen len[buffer])
+
+syz_emit_proto$ip_ipv4(proto const[IPPROTO_IP], addr ptr[in, sockaddr_in], addrlen len[addr], packet ptr[in, ipv4_packet], ttl int8[ttl]) sock_proto
+syz_emit_proto$ip_ipv6(proto const[IPPROTO_IP], addr ptr[in, sockaddr_in6], addrlen len[addr], packet ptr[in, ipv6_packet], ttl int8[ttl]) sock_proto
+syz_receive_proto$ip_ipv4(proto const[IPPROTO_IP], fd sock_proto, buffer ptr[out, array[int8]], buflen len[buffer])
+syz_receive_proto$ip_ipv6(proto const[IPPROTO_IP], fd sock_proto, buffer ptr[out, array[int8]], buflen len[buffer])
+
+syz_emit_proto$ipip_ipv4(proto const[IPPROTO_IPIP], addr ptr[in, sockaddr_in], addrlen len[addr], packet ptr[in, ipv4_packet], ttl int8[ttl]) sock_proto
+syz_emit_proto$ipip_ipv6(proto const[IPPROTO_IPIP], addr ptr[in, sockaddr_in6], addrlen len[addr], packet ptr[in, ipv6_packet], ttl int8[ttl]) sock_proto
+syz_receive_proto$ipip_ipv4(proto const[IPPROTO_IPIP], fd sock_proto, buffer ptr[out, array[int8]], buflen len[buffer])
+syz_receive_proto$ipip_ipv6(proto const[IPPROTO_IPIP], fd sock_proto, buffer ptr[out, array[int8]], buflen len[buffer])
+
+syz_emit_proto$ipv6_ipv4(proto const[IPPROTO_IPV6], addr ptr[in, sockaddr_in], addrlen len[addr], packet ptr[in, ipv4_packet], ttl int8[ttl]) sock_proto
+syz_emit_proto$ipv6_ipv6(proto const[IPPROTO_IPV6], addr ptr[in, sockaddr_in6], addrlen len[addr], packet ptr[in, ipv6_packet], ttl int8[ttl]) sock_proto
+syz_receive_proto$ipv6_ipv4(proto const[IPPROTO_IPV6], fd sock_proto, buffer ptr[out, array[int8]], buflen len[buffer])
+syz_receive_proto$ipv6_ipv6(proto const[IPPROTO_IPV6], fd sock_proto, buffer ptr[out, array[int8]], buflen len[buffer])
+
+syz_emit_proto$l2tp_ipv4(proto const[IPPROTO_L2TP], addr ptr[in, sockaddr_in], addrlen len[addr], packet ptr[in, ipv4_packet], ttl int8[ttl]) sock_proto
+syz_emit_proto$l2tp_ipv6(proto const[IPPROTO_L2TP], addr ptr[in, sockaddr_in6], addrlen len[addr], packet ptr[in, ipv6_packet], ttl int8[ttl]) sock_proto
+syz_receive_proto$l2tp_ipv4(proto const[IPPROTO_L2TP], fd sock_proto, buffer ptr[out, array[int8]], buflen len[buffer])
+syz_receive_proto$l2tp_ipv6(proto const[IPPROTO_L2TP], fd sock_proto, buffer ptr[out, array[int8]], buflen len[buffer])
+
+syz_emit_proto$mh_ipv4(proto const[IPPROTO_MH], addr ptr[in, sockaddr_in], addrlen len[addr], packet ptr[in, ipv4_packet], ttl int8[ttl]) sock_proto
+syz_emit_proto$mh_ipv6(proto const[IPPROTO_MH], addr ptr[in, sockaddr_in6], addrlen len[addr], packet ptr[in, ipv6_packet], ttl int8[ttl]) sock_proto
+syz_receive_proto$mh_ipv4(proto const[IPPROTO_MH], fd sock_proto, buffer ptr[out, array[int8]], buflen len[buffer])
+syz_receive_proto$mh_ipv6(proto const[IPPROTO_MH], fd sock_proto, buffer ptr[out, array[int8]], buflen len[buffer])
+
+syz_emit_proto$mpls_ipv4(proto const[IPPROTO_MPLS], addr ptr[in, sockaddr_in], addrlen len[addr], packet ptr[in, ipv4_packet], ttl int8[ttl]) sock_proto
+syz_emit_proto$mpls_ipv6(proto const[IPPROTO_MPLS], addr ptr[in, sockaddr_in6], addrlen len[addr], packet ptr[in, ipv6_packet], ttl int8[ttl]) sock_proto
+syz_receive_proto$mpls_ipv4(proto const[IPPROTO_MPLS], fd sock_proto, buffer ptr[out, array[int8]], buflen len[buffer])
+syz_receive_proto$mpls_ipv6(proto const[IPPROTO_MPLS], fd sock_proto, buffer ptr[out, array[int8]], buflen len[buffer])
+
+syz_emit_proto$mtp_ipv4(proto const[IPPROTO_MTP], addr ptr[in, sockaddr_in], addrlen len[addr], packet ptr[in, ipv4_packet], ttl int8[ttl]) sock_proto
+syz_emit_proto$mtp_ipv6(proto const[IPPROTO_MTP], addr ptr[in, sockaddr_in6], addrlen len[addr], packet ptr[in, ipv6_packet], ttl int8[ttl]) sock_proto
+syz_receive_proto$mtp_ipv4(proto const[IPPROTO_MTP], fd sock_proto, buffer ptr[out, array[int8]], buflen len[buffer])
+syz_receive_proto$mtp_ipv6(proto const[IPPROTO_MTP], fd sock_proto, buffer ptr[out, array[int8]], buflen len[buffer])
+
+syz_emit_proto$none_ipv4(proto const[IPPROTO_NONE], addr ptr[in, sockaddr_in], addrlen len[addr], packet ptr[in, ipv4_packet], ttl int8[ttl]) sock_proto
+syz_emit_proto$none_ipv6(proto const[IPPROTO_NONE], addr ptr[in, sockaddr_in6], addrlen len[addr], packet ptr[in, ipv6_packet], ttl int8[ttl]) sock_proto
+syz_receive_proto$none_ipv4(proto const[IPPROTO_NONE], fd sock_proto, buffer ptr[out, array[int8]], buflen len[buffer])
+syz_receive_proto$none_ipv6(proto const[IPPROTO_NONE], fd sock_proto, buffer ptr[out, array[int8]], buflen len[buffer])
+
+syz_emit_proto$pim_ipv4(proto const[IPPROTO_PIM], addr ptr[in, sockaddr_in], addrlen len[addr], packet ptr[in, ipv4_packet], ttl int8[ttl]) sock_proto
+syz_emit_proto$pim_ipv6(proto const[IPPROTO_PIM], addr ptr[in, sockaddr_in6], addrlen len[addr], packet ptr[in, ipv6_packet], ttl int8[ttl]) sock_proto
+syz_receive_proto$pim_ipv4(proto const[IPPROTO_PIM], fd sock_proto, buffer ptr[out, array[int8]], buflen len[buffer])
+syz_receive_proto$pim_ipv6(proto const[IPPROTO_PIM], fd sock_proto, buffer ptr[out, array[int8]], buflen len[buffer])
+
+syz_emit_proto$pup_ipv4(proto const[IPPROTO_PUP], addr ptr[in, sockaddr_in], addrlen len[addr], packet ptr[in, ipv4_packet], ttl int8[ttl]) sock_proto
+syz_emit_proto$pup_ipv6(proto const[IPPROTO_PUP], addr ptr[in, sockaddr_in6], addrlen len[addr], packet ptr[in, ipv6_packet], ttl int8[ttl]) sock_proto
+syz_receive_proto$pup_ipv4(proto const[IPPROTO_PUP], fd sock_proto, buffer ptr[out, array[int8]], buflen len[buffer])
+syz_receive_proto$pup_ipv6(proto const[IPPROTO_PUP], fd sock_proto, buffer ptr[out, array[int8]], buflen len[buffer])
+
+syz_emit_proto$raw_ipv4(proto const[IPPROTO_RAW], addr ptr[in, sockaddr_in], addrlen len[addr], packet ptr[in, ipv4_packet], ttl int8[ttl]) sock_proto
+syz_emit_proto$raw_ipv6(proto const[IPPROTO_RAW], addr ptr[in, sockaddr_in6], addrlen len[addr], packet ptr[in, ipv6_packet], ttl int8[ttl]) sock_proto
+syz_receive_proto$raw_ipv4(proto const[IPPROTO_RAW], fd sock_proto, buffer ptr[out, array[int8]], buflen len[buffer])
+syz_receive_proto$raw_ipv6(proto const[IPPROTO_RAW], fd sock_proto, buffer ptr[out, array[int8]], buflen len[buffer])
+
+syz_emit_proto$routing_ipv4(proto const[IPPROTO_ROUTING], addr ptr[in, sockaddr_in], addrlen len[addr], packet ptr[in, ipv4_packet], ttl int8[ttl]) sock_proto
+syz_emit_proto$routing_ipv6(proto const[IPPROTO_ROUTING], addr ptr[in, sockaddr_in6], addrlen len[addr], packet ptr[in, ipv6_packet], ttl int8[ttl]) sock_proto
+syz_receive_proto$routing_ipv4(proto const[IPPROTO_ROUTING], fd sock_proto, buffer ptr[out, array[int8]], buflen len[buffer])
+syz_receive_proto$routing_ipv6(proto const[IPPROTO_ROUTING], fd sock_proto, buffer ptr[out, array[int8]], buflen len[buffer])
+
+syz_emit_proto$rsvp_ipv4(proto const[IPPROTO_RSVP], addr ptr[in, sockaddr_in], addrlen len[addr], packet ptr[in, ipv4_packet], ttl int8[ttl]) sock_proto
+syz_emit_proto$rsvp_ipv6(proto const[IPPROTO_RSVP], addr ptr[in, sockaddr_in6], addrlen len[addr], packet ptr[in, ipv6_packet], ttl int8[ttl]) sock_proto
+syz_receive_proto$rsvp_ipv4(proto const[IPPROTO_RSVP], fd sock_proto, buffer ptr[out, array[int8]], buflen len[buffer])
+syz_receive_proto$rsvp_ipv6(proto const[IPPROTO_RSVP], fd sock_proto, buffer ptr[out, array[int8]], buflen len[buffer])
+
+syz_emit_proto$sctp_ipv4(proto const[IPPROTO_SCTP], addr ptr[in, sockaddr_in], addrlen len[addr], packet ptr[in, ipv4_packet], ttl int8[ttl]) sock_proto
+syz_emit_proto$sctp_ipv6(proto const[IPPROTO_SCTP], addr ptr[in, sockaddr_in6], addrlen len[addr], packet ptr[in, ipv6_packet], ttl int8[ttl]) sock_proto
+syz_receive_proto$sctp_ipv4(proto const[IPPROTO_SCTP], fd sock_proto, buffer ptr[out, array[int8]], buflen len[buffer])
+syz_receive_proto$sctp_ipv6(proto const[IPPROTO_SCTP], fd sock_proto, buffer ptr[out, array[int8]], buflen len[buffer])
+
+syz_emit_proto$tcp_ipv4(proto const[IPPROTO_TCP], addr ptr[in, sockaddr_in], addrlen len[addr], packet ptr[in, ipv4_packet], ttl int8[ttl]) sock_proto
+syz_emit_proto$tcp_ipv6(proto const[IPPROTO_TCP], addr ptr[in, sockaddr_in6], addrlen len[addr], packet ptr[in, ipv6_packet], ttl int8[ttl]) sock_proto
+syz_receive_proto$tcp_ipv4(proto const[IPPROTO_TCP], fd sock_proto, buffer ptr[out, array[int8]], buflen len[buffer])
+syz_receive_proto$tcp_ipv6(proto const[IPPROTO_TCP], fd sock_proto, buffer ptr[out, array[int8]], buflen len[buffer])
+
+syz_emit_proto$tp_ipv4(proto const[IPPROTO_TP], addr ptr[in, sockaddr_in], addrlen len[addr], packet ptr[in, ipv4_packet], ttl int8[ttl]) sock_proto
+syz_emit_proto$tp_ipv6(proto const[IPPROTO_TP], addr ptr[in, sockaddr_in6], addrlen len[addr], packet ptr[in, ipv6_packet], ttl int8[ttl]) sock_proto
+syz_receive_proto$tp_ipv4(proto const[IPPROTO_TP], fd sock_proto, buffer ptr[out, array[int8]], buflen len[buffer])
+syz_receive_proto$tp_ipv6(proto const[IPPROTO_TP], fd sock_proto, buffer ptr[out, array[int8]], buflen len[buffer])
+
+syz_emit_proto$udp_ipv4(proto const[IPPROTO_UDP], addr ptr[in, sockaddr_in], addrlen len[addr], packet ptr[in, ipv4_packet], ttl int8[ttl]) sock_proto
+syz_emit_proto$udp_ipv6(proto const[IPPROTO_UDP], addr ptr[in, sockaddr_in6], addrlen len[addr], packet ptr[in, ipv6_packet], ttl int8[ttl]) sock_proto
+syz_receive_proto$udp_ipv4(proto const[IPPROTO_UDP], fd sock_proto, buffer ptr[out, array[int8]], buflen len[buffer])
+syz_receive_proto$udp_ipv6(proto const[IPPROTO_UDP], fd sock_proto, buffer ptr[out, array[int8]], buflen len[buffer])
+
+syz_emit_proto$udplite_ipv4(proto const[IPPROTO_UDPLITE], addr ptr[in, sockaddr_in], addrlen len[addr], packet ptr[in, ipv4_packet], ttl int8[ttl]) sock_proto
+syz_emit_proto$udplite_ipv6(proto const[IPPROTO_UDPLITE], addr ptr[in, sockaddr_in6], addrlen len[addr], packet ptr[in, ipv6_packet], ttl int8[ttl]) sock_proto
+syz_receive_proto$udplite_ipv4(proto const[IPPROTO_UDPLITE], fd sock_proto, buffer ptr[out, array[int8]], buflen len[buffer])
+syz_receive_proto$udplite_ipv6(proto const[IPPROTO_UDPLITE], fd sock_proto, buffer ptr[out, array[int8]], buflen len[buffer])
+
+syz_emit_proto$nexthdr_hop_ipv4(proto const[NEXTHDR_HOP], addr ptr[in, sockaddr_in], addrlen len[addr], packet ptr[in, ipv4_packet], ttl int8[ttl]) sock_proto
+syz_emit_proto$nexthdr_hop_ipv6(proto const[NEXTHDR_HOP], addr ptr[in, sockaddr_in6], addrlen len[addr], packet ptr[in, ipv6_packet], ttl int8[ttl]) sock_proto
+syz_receive_proto$nexthdr_hop_ipv4(proto const[NEXTHDR_HOP], fd sock_proto, buffer ptr[out, array[int8]], buflen len[buffer])
+syz_receive_proto$nexthdr_hop_ipv6(proto const[NEXTHDR_HOP], fd sock_proto, buffer ptr[out, array[int8]], buflen len[buffer])
+
+syz_emit_proto$nexthdr_routing_ipv4(proto const[NEXTHDR_ROUTING], addr ptr[in, sockaddr_in], addrlen len[addr], packet ptr[in, ipv4_packet], ttl int8[ttl]) sock_proto
+syz_emit_proto$nexthdr_routing_ipv6(proto const[NEXTHDR_ROUTING], addr ptr[in, sockaddr_in6], addrlen len[addr], packet ptr[in, ipv6_packet], ttl int8[ttl]) sock_proto
+syz_receive_proto$nexthdr_routing_ipv4(proto const[NEXTHDR_ROUTING], fd sock_proto, buffer ptr[out, array[int8]], buflen len[buffer])
+syz_receive_proto$nexthdr_routing_ipv6(proto const[NEXTHDR_ROUTING], fd sock_proto, buffer ptr[out, array[int8]], buflen len[buffer])
+
+syz_emit_proto$nexthdr_fragment_ipv4(proto const[NEXTHDR_FRAGMENT], addr ptr[in, sockaddr_in], addrlen len[addr], packet ptr[in, ipv4_packet], ttl int8[ttl]) sock_proto
+syz_emit_proto$nexthdr_fragment_ipv6(proto const[NEXTHDR_FRAGMENT], addr ptr[in, sockaddr_in6], addrlen len[addr], packet ptr[in, ipv6_packet], ttl int8[ttl]) sock_proto
+syz_receive_proto$nexthdr_fragment_ipv4(proto const[NEXTHDR_FRAGMENT], fd sock_proto, buffer ptr[out, array[int8]], buflen len[buffer])
+syz_receive_proto$nexthdr_fragment_ipv6(proto const[NEXTHDR_FRAGMENT], fd sock_proto, buffer ptr[out, array[int8]], buflen len[buffer])
+
+
+
+close$icmp(fd sock_proto)
